@@ -1,0 +1,8 @@
+{
+  "short_name": "The Cookie Club",
+  "name": "The Cookie Club - Front End",
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}

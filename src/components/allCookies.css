@@ -1,0 +1,14 @@
+.row1,.row2,.row3,.row4 {
+    display: flex;
+    justify-content: space-evenly;
+    margin-left: 0px;
+    padding-top: 10px;
+    padding-left: 0px;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    font-family:'Montserrat', sans-serif;
+    text-transform: uppercase;
+    text-align: left;
+    color: #FF66C4 ;
+    
+}

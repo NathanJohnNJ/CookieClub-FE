@@ -1,0 +1,327 @@
+/* File: font.css */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;1,400;1,600&display=swap');
+
+/*******NAVBAR CSS*********/
+.navbarMain {
+  display: flex;
+  flex-direction: row;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+  font-weight: bolder;
+  white-space: nowrap;
+  width: 100vmax;
+  color: #020504;
+  /* height: 4vh; */
+  text-decoration: none;
+  padding-top: 3vh;
+  background-color: white;
+  z-index: 999;
+
+}
+
+.navbarMainChild {
+  padding-bottom: 10px;
+}
+
+.navbarMainChild1 {
+  padding-top: 4px;
+}
+
+.logo {
+  width: 200px;
+  padding-left: 3vh;
+}
+
+.current {
+  color: #020504;
+  text-decoration: none;
+  font-size: 18px;
+  margin: 5px;
+}
+
+.page {
+  margin-left: 10px;
+  margin-right: 10px;
+  text-decoration: none;
+  padding: 10px;
+  font-size: 16px;
+  color: #FF66C4;
+}
+
+.page:hover {
+  color: #020504;
+}
+
+.mainContent {
+  display: block;
+}
+
+.loginorreg {
+  display: flex;
+  align-items: center;
+  width: 100px
+}
+
+/*******LOGIN/ REGISTER/ LOGOUT NAVBAR TEXT*********/
+
+.accAndLogoutDiv {
+  display: flex;
+
+}
+
+.logout {
+  color: #FF66C4;
+  display: flex;
+  position: absolute;
+  right: 5%;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+  font-weight: bolder;
+  text-transform: uppercase;
+  margin: 2px;
+  background: none;
+  border: none;
+  width: 50px;
+  height: 3vh;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.logout:hover {
+  color: #a91871;
+}
+
+.registerMain {
+  position: absolute;
+  right: 0;
+  margin-right: 9%;
+}
+
+.loginMain {
+  position: absolute;
+  right: 0;
+  margin-right: 15%;
+}
+
+.lrbtn {
+  color: #FF66C4;
+  display: flex;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+  font-weight: bolder;
+  /* justify-content: space-between; */
+  /* align-self: center; */
+  margin-top: -18px;
+  background: none;
+  border: none;
+  width: 0px;
+  height: 3vh;
+  /* white-space: nowrap; */
+}
+
+.lrbtn:hover,
+.logout:hover {
+  color: #a91871;
+}
+
+/*******SIGN UP / LOG IN MODAL*********/
+
+.registerContainer {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  font-weight: bolder;
+  background-color: #F6F6F6;
+  height: 100%;
+  padding-left: 20px;
+  padding-top: 8px;
+  margin-top: 0px;
+  padding-bottom: 0px;
+}
+
+.closeBtn {
+  background-color: #5CB8B2;
+  color: white;
+  font-size: 12px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bolder;
+  width: 25px;
+  height: 20px;
+  box-sizing: border-box;
+  border-radius: 100px;
+  cursor: pointer;
+  margin-bottom: 50vh;
+  margin-top: 10px;
+}
+
+.closeBtn:hover {
+  background-color: #418681;
+  box-shadow: none;
+}
+
+.registerHeader,.PlzLogin {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bolder;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  line-height: 23px;
+  color: #FF66C4;
+}
+
+.inputs {
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  margin-left: 5px;
+
+}
+
+.input, .loginInput {
+  display: flex;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bolder;
+  width: 200px;
+  height: 30px;
+  box-sizing: border-box;
+  border: 0;
+  border-radius: 90px;
+  cursor: pointer;
+  padding-left: 8px;
+  margin-left: 0px;
+  margin-bottom: 0px;
+}
+
+
+.left {
+  display: flex;
+  flex-direction: column;
+  margin-right: 30px;
+  margin-left: -30px
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  margin-right: 10px;
+  margin-left: -40px
+
+}
+
+.label,.loginLabel {
+  font-size: 12px;
+  margin: 15px;
+  border-left: 5px;
+  padding-left: 5%;
+}
+
+.registerBtn,.loginBtn {
+  background-color: #5CB8B2;
+  color: white;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bolder;
+  text-transform: uppercase;
+  width: 150px;
+  height: 30px;
+  box-sizing: border-box;
+  border: 0;
+  border-radius: 100px;
+  cursor: pointer;
+  padding-left: 0px;
+  margin-left: 0px;
+  margin-bottom: 3vh;
+}
+
+.registerBtn,.loginBtn:hover {
+  background-color: #418681;
+  box-shadow: none;
+}
+
+.tsandcs {
+  text-decoration: none;
+  color: #020504;
+  display: flex;
+  flex-direction: row;
+}
+
+.text {
+  margin-left: 5px;
+}
+
+.tandc {
+  text-decoration: none;
+  color: #FF66C4;
+}
+
+.tandc:hover {
+  text-decoration: underline;
+  color: #020504;
+}
+
+
+/*******LOG IN MODAL*********/
+
+.loginContainer {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  font-weight: bolder;
+  background-color: #F6F6F6;
+  height: 100%;
+  padding-left: 20px;
+  padding-top: 8px;
+  margin-top: 0px;
+  padding-bottom: 0px;
+}
+
+.inputsleft {
+  display: flex;
+  flex-direction: column;
+  height: 70%;
+  margin-right: 30px;
+  margin-left: -70px
+}
+
+/* 
+
+.opening {
+  margin-top: -40px;
+  font-size: 35px;
+  font-family: 'Montserrat', sans-serif;
+} */
+
+
+
+.ReactModal__Overlay {
+  position: absolute;
+}
+
+
+
+@media screen and (max-width:1300px) {
+  .loginMain {
+    margin-right: 200px;
+  }
+
+  .registerMain {
+    margin-right: 120px
+  }
+
+  .search {
+    margin-right: 40px;
+  }
+}
+

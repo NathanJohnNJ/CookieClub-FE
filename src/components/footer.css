@@ -1,0 +1,111 @@
+.footerMain {
+    display: flex;
+    margin-top: -10px;
+    position: relative;
+    height: 400px;
+    width: 100%;
+    background-image: url('./images/background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    /* width: 100vmax; */
+}
+
+.socials {
+    display: flex;
+    margin-left: 80px;
+    flex-direction: column;
+    justify-items: space-evenly;
+    align-items: left;
+    text-align: left;
+    letter-spacing: 0.5px;
+    margin-left: 30px;
+    padding-top: 50px;
+}
+
+h1 {
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    color: #020504;
+}
+
+.socialLogos {
+    display: flex;
+    flex-direction: row;
+    margin-left: -18px;
+}
+
+.socialLogo {
+    margin: 20px;
+    height: 25px;
+    width: 25px;
+}
+
+.socialLogo:hover {
+    opacity: 50%
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    justify-content: center;
+    font-weight: bolder;
+    line-height: 0.5px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    margin: 30px;
+}
+
+.emailAdd {
+    font-family: 'Montserrat', sans-serif;
+    color: #020504;
+    font-size: 14px;
+}
+
+.email {
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    color: #020504;
+    font-size: 12px;
+    font-weight: lighter;
+}
+
+.email:hover {
+    text-decoration: underline;
+}
+
+.phoneNumLabel {
+    font-family: 'Montserrat', sans-serif;
+    color: #020504;
+    font-size: 14px;
+}
+
+.phoneNum {
+    font-family: 'Montserrat', sans-serif;
+    color: #020504;
+    font-size: 12px;
+    font-weight: lighter;
+}
+
+.phoneNum:hover {
+    text-decoration: underline;
+}
+
+.footerLogo {
+    width: 200px;
+    height: 200px;
+}
+
+.footerPicDiv {
+    display: flex;
+    margin-right: 15%;
+}
+
+.footerPic {
+    height: 100%;
+    position: absolute;
+    right: 0
+}

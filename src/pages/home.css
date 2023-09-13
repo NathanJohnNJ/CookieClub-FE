@@ -1,0 +1,142 @@
+/*******HOMEPAGE CSS*********/
+.homePage {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #F6F6F6;
+    height: 100%;
+    width: 100%;
+}
+
+.homeHeader {
+    display: flex;
+    padding-bottom: 10px;
+}
+
+.OurFavourites {
+    display: flex;
+    color: #F6F6F6;
+}
+
+.ourFavHeader {
+    padding-bottom: 2vh;
+    display: flex;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-size: 37.8px;
+
+}
+
+.ourFavSlice {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-left: 0px;
+    padding-top: 10px;
+    padding-left: 0px;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    text-align: left;
+    color: #FF66C4;
+}
+
+
+.sliderHeader {
+    display: flex;
+
+}
+
+.textHeader {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    /* padding-top: 25vh; */
+    padding-left: 60vmax;
+
+}
+
+.approvedLogo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+    padding-right: 20vh;
+    padding-bottom: -10px;
+}
+
+.textHeader1 {
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-size: 37px;
+    letter-spacing: 0.5px;
+    padding-right: 20vh;
+    padding-top: -10px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    color: #020504;
+}
+
+.textHeader2 {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    padding-right: 20vh;
+    color: #FF66C4;
+
+}
+
+.btnHeader {
+    justify-content: center;
+    align-content: center;
+    background-color: #5CB8B2;
+    color: white;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
+    text-transform: uppercase;
+    width: 150px;
+    height: 40px;
+    box-sizing: border-box;
+    border: 0;
+    border-radius: 100px;
+    cursor: pointer;
+    margin-right: 20vh;
+    
+}
+
+
+/* .carouselMain{
+    overflow: auto;
+    height: 70vh;
+    width: 100vw;
+    margin-left: 10vw;}  */
+
+/* /* .ourFavourites {
+
+} */
+
+/* .cookiebio {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+    display: block;
+}
+
+.title{
+    font-size:80px;
+    margin-top: 55px;
+    margin-bottom: -5px;
+    color: #020504;
+    font-weight: bolder;
+    font-family: 'Montserrat', sans-serif
+} */

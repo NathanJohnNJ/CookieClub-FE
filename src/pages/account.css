@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;1,400;1,600&display=swap');
+
+/*******ACCOUNT DETAILS HOME*********/
+.accountPage {
+    background-color: #F6F6F6;
+    height: 100vh;
+    
+}
+
+.accountTitle {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    line-height: 23px;
+    color: #FF66C4;
+    padding-top: 5%;
+    margin-left: -60%;
+}
+
+.name, .usernameEmail{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    font-weight: bolder;
+    padding-left: 20px;
+    padding-top: 8px;
+    margin-top: 0px;
+    padding-bottom: 0px;
+    
+}
+
+.firstnamebox,.surnamebox,.userbox,.emailbox {
+    font-family: 'Montserrat', sans-serif;
+    margin-left: 5px;
+    
+}
+
+.fnLabel,.surlabel,.userLabel{
+    margin-left: -70%;
+}
+
+.emailLabel{
+    margin-left: -72.5%;
+    
+}
+.newPassword, .repeatPassword, .newEmail, .newUsername{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    display: flex;
+    margin-top: 2px;
+    margin-left: 11.5%;
+    padding-left: 14px;
+    padding-top: 5px;
+    width: 200px;
+    height: 30px;
+    background-color: white;
+    border-radius: 100px;
+}
+
+.fnLabelTxt, .surLabelTxt, .usernameLabelTxt, .emailLabelTxt, .usernameModalTxt, .emailModalTxt { 
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    display: flex;
+    margin-top: 2px;
+    margin-left: 11.5%;
+    padding-left: 14px;
+    padding-top: 5px;
+    width: 200px;
+    height: 30px;
+    background-color: white;
+    border-radius: 100px;
+}
+
+  
+/*******BUTTONS*********/
+
+.emailBtn {
+    display: flex;
+    background-color: #5CB8B2;
+    color: white;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
+    text-transform: uppercase;
+    width: 150px;
+    height: 30px;
+    box-sizing: border-box;
+    border: 0;
+    border-radius: 100px;
+    cursor: pointer;
+    padding-top: 6px;
+    justify-content: center;
+    margin-left: 13.5%;
+    margin-bottom: 3vh;
+}
+
+.keepAccount{
+    display: flex;
+    background-color: #5CB8B2;
+    color: white;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
+    text-transform: uppercase;
+    width: 150px;
+    height: 30px;
+    box-sizing: border-box;
+    border: 0;
+    border-radius: 100px;
+    cursor: pointer;
+    padding-top: 4px;
+    justify-content: center;
+    margin-left: 13.5%;
+    margin-bottom: 3vh;
+    line-height: 12px;
+}
+
+.keepAccount:hover {
+    background-color: #418681;
+    box-shadow: none;
+  }
+
+.deleteAcc{
+    display: flex;
+    background-color: #FD3CB0;
+    color: white;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
+    text-transform: uppercase;
+    width: 150px;
+    height: 30px;
+    box-sizing: border-box;
+    border: 0;
+    border-radius: 100px;
+    cursor: pointer;
+    padding-top: 6px;
+    justify-content: center;
+    margin-left: 13.5%;
+    margin-bottom: 3vh;
+    text-decoration: none;
+}
+
+.deleteAcc:hover {
+    background-color: #851d5c;
+    box-shadow: none;
+  }
+.emailBtn:hover {
+    background-color: #418681;
+    box-shadow: none;
+  }
+
+.passwordBtn {
+    display: flex;
+    background-color: #5CB8B2;
+    color: white;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
+    text-transform: uppercase;
+    width: 170px;
+    height: 30px;
+    box-sizing: border-box;
+    border: 0;
+    border-radius: 100px;
+    cursor: pointer;
+    padding-top: 6px;
+    justify-content: center;
+    margin-left: 13.5%;
+    margin-bottom: 30px;
+    padding-bottom: 0;
+}
+
+.passwordBtn:hover {
+    background-color: #418681;
+    box-shadow: none;
+  }
+
+.usernameBtn {
+    display: flex;
+    background-color: #5CB8B2;
+    color: white;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
+    text-transform: uppercase;
+    width: 170px;
+    height: 30px;
+    box-sizing: border-box;
+    border: 0;
+    border-radius: 100px;
+    cursor: pointer;
+    padding-top: 7px;
+    justify-content: center;
+
+    margin-left: 13.5%;
+    margin-bottom: 3vh;
+}
+
+.usernameBtn:hover {
+    background-color: #418681;
+    box-shadow: none;
+  }
+
+.deleteBtn {
+    display: flex;
+    background-color: #5CB8B2;
+    color: white;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
+    text-transform: uppercase;
+    width: 170px;
+    height: 30px;
+    box-sizing: border-box;
+    border: 0;
+    border-radius: 100px;
+    cursor: pointer;
+    padding-top: 7px;
+    justify-content: center;
+
+    margin-left: 13.5%;
+    margin-bottom: 3vh;
+}
+
+.deleteBtn:hover {
+    background-color: #418681;
+    box-shadow: none;
+  }
+
+  .submitBtn {
+    display: flex;
+    background-color: #5CB8B2;
+    color: white;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
+    text-transform: uppercase;
+    width: 170px;
+    height: 30px;
+    box-sizing: border-box;
+    border: 0;
+    border-radius: 100px;
+    cursor: pointer;
+    padding-top: 7px;
+    justify-content: center;
+
+    margin-left: 13.5%;
+    margin-bottom: 3vh;
+}
+
+.submitBtn:hover {
+    background-color: #418681;
+    box-shadow: none;
+  }
+  .closeBtn {
+    background-color: #5CB8B2;
+    color: white;
+    font-size: 12px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
+    width: 25px;
+    height: 20px;
+    box-sizing: border-box;
+    border: 0;
+    border-radius: 100px;
+    cursor: pointer;
+    justify-content: center;
+    margin-bottom: 20px;
+
+}
+
+
+
