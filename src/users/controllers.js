@@ -24,7 +24,7 @@ const addUser = async (req, res) => {
             agreeToTerms: req.body.agreeToTerms
         })
         const successResponse = {
-            message: `${req.body.firstName} ${req.body.lastName} successfully added.`,
+            message: `${req.body.firstName} ${req.body.lastName} (${req.body.username}) successfully added.`,
             newUser: newUser
         }
         res.status(200).json(successResponse);
@@ -32,6 +32,20 @@ const addUser = async (req, res) => {
         console.log(error);
     }
 };
+const login = async (req, res) => {
+    try {
+        const newUser = await User.findOne({
+            username: req.body.username
+        })
+        const successResponse = {
+            message: `${req.body.username} successfully logged in.`,
+            newUser: newUser
+        }
+        res.status(200).json(successResponse);
+    } catch (error) {
+        console.log(error);
+    }
+}
 const updateUser = async (req, res) => {
     try {
         const updateKey = req.body.updateKey
@@ -78,6 +92,7 @@ const deleteAll = async (req, res) => {
 module.exports = {
     getAllUsers,
     addUser,
+    login,
     updateUser,
     deleteUser,
     deleteAll
