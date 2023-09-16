@@ -2,9 +2,21 @@ import './style.css';
 import LoginOrAcc from './loginOrAcc';
 import Logout from './logout';
 import { Outlet, NavLink } from 'react-router-dom';
-import logo from "./images/cookie-logo.png"
+import logo from "./images/cookie-logo.png";
+import { useState } from 'react';
+import { checkConnection } from '../utils';
 
 const NavBar = (props) => {
+    const [connected, setConnected] = useState(false);
+    const isConnected = checkConnection();
+
+    if(isConnected){
+        setConnected(true);
+    } else{
+        setConnected(false);
+    }
+    
+
 
     return(
         <>
@@ -20,7 +32,15 @@ const NavBar = (props) => {
                 <Logout setLoginCookie={props.setLoginCookie} /> 
                  :
                  <LoginOrAcc loginCookie={props.loginCookie} setLoginCookie={props.setLoginCookie} newUser={props.newUser} setNewUser={props.setNewUser} token={props.token} setToken={props.setToken}/> 
-                 }
+                }
+            <div className="status">
+                {connected
+                ?
+                <div className="notConnected"></div>
+                :
+                <div className="connected"></div>
+                }
+            </div>
             <div className="mainContent">
                 <Outlet />
             </div>
