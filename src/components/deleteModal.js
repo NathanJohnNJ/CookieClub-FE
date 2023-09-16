@@ -25,7 +25,7 @@ function openConfirmation() {
 const deleteFunc = async () => {
     await handleDelete(props.token)
     props.setNewUser('')
-    settimeout(() =>{
+    setTimeout(() =>{
         openConfirmation()
     }, 2000)
 }
