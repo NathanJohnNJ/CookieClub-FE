@@ -13,14 +13,12 @@
     padding-right: 8px;
     margin-bottom: 50px;
 }
-
 .cookieIMG {
     display: flex;
     padding-bottom: 0px;
     margin-bottom: 0px;
     width: 216px;
 }
-
 .recipeTxt {
     padding-top: 5px;
     width: 150px;
@@ -28,7 +26,6 @@
     font-weight: bolder;
     font-size: 12px;
 }
-
 .modalBtn {
     margin-top: 16px;
     background-color: #5CB8B2;
@@ -42,14 +39,11 @@
     justify-content: center;
 
 }
-
 .modalBtn:hover {
     background-color: #418681;
     box-shadow: none;
   }
-
 /*******RECIPE MODAL*********/
-
 .closeBtn {
     background-color: #5CB8B2;
     color: white;
@@ -66,7 +60,6 @@
     margin-bottom: 20px;
 
 }
-
 .modalContainer {
     background-color: #F6F6F6;
     height: 100%;
@@ -74,34 +67,25 @@
     padding-top: 20px;
     margin-top: 0px;
     padding-bottom: 0px;
-
 }
-
 .modalTop {
     display: flex;
-
 }
-
 .modalLeft {
     display: flex; 
     flex-direction: column;   
 }
-
 .modalRight {
     display: flex;
     flex-direction: column;
     padding-left: 30px;
-    
 }
-
 .modalIMG {
     width: 215px;
     height: fit-content;
     box-sizing: border-box;
     color: white;
-
 }
-
 .modalTxt {
     display: flex;
     margin-left: 0px;

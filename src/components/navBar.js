@@ -3,18 +3,21 @@ import LoginOrAcc from './loginOrAcc';
 import Logout from './logout';
 import { Outlet, NavLink } from 'react-router-dom';
 import logo from "./images/cookie-logo.png";
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { checkConnection } from '../utils';
 
 const NavBar = (props) => {
     const [connected, setConnected] = useState(false);
     const isConnected = checkConnection();
 
-    if(isConnected){
-        setConnected(true);
-    } else{
-        setConnected(false);
-    }
+    useEffect(() => {
+        if(isConnected){
+            setConnected(true);
+        } else{
+            setConnected(false);
+        }
+    })
+    
     
 
 
@@ -38,12 +41,12 @@ const NavBar = (props) => {
                 ?
                 <>
                     <div className="notConnected"></div>
-                    <div className="backendHint"></div>
+                    <div className="backendHint">Not connected to back-end</div>
                 </>
                 :
                 <>
                     <div className="connected"></div>
-                    <div className="backendHint"></div>
+                    <div className="backendHint">Connected to back-end</div>
                 </>
                 }
             </div>

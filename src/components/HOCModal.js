@@ -27,9 +27,7 @@ const HOCModal = (props) => {
                 contentLabel='openCookie'
             >
                 <div className="modalContainer">
-
                     <div className="modalTop">
-
                         <div className='modalLeft'>
                             <button className="closeBtn" onClick={closeModal}>X</button>
                             <img className='modalIMG' src=
@@ -39,17 +37,13 @@ const HOCModal = (props) => {
                             />
                             <p className='modalTxt'>{props.data.recipe.label}</p>
                         </div>
-
                         <div className='modalRight'>
-                           
                             <h2 className='IngredHEAD'>Ingredients</h2>
                             {props.data.recipe.ingredients.map((ingredient, index) => (
                                 <p className='IngredientTXT' key={index}>{ingredient.text}</p>
                             ))}
                         </div>
-
                     </div>
-
                     <h2 className='PrepTXT'>Preparation</h2>
                     <div>
                         <a href={props.data.recipe.shareAs} target="_blank" rel="noreferrer">
@@ -57,8 +51,6 @@ const HOCModal = (props) => {
                         </a>
                     </div>
                 </div>
-
-
             </Modal>
             <div className='labelDiv'>
                 <p className='recipeTxt'>{props.data.recipe.label}</p>

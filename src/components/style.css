@@ -69,15 +69,15 @@
   position: absolute;
   right:0;
   margin-right: 10px;
-  margin-top: 5px;
+  margin-top: -15px;
   display: flex;
 }
 .connected{
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 50px;
-  height: 50px;
+  width: 15px;
+  height: 15px;
   border-radius: 50%;
   background-color: rgb(25, 212, 25);
 }
@@ -85,27 +85,22 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 50px;
-  height: 50px;
+  width: 15px;
+  height: 15px;
   border-radius: 50%;
   background-color: rgb(212, 25, 25);
 }
 .backendHint{
   visibility: hidden;
-  position: absolute;
-  right:0;
-  margin-right: 10px;
-  margin-top: 55px;
+  position:absolute;
+  margin-left: -140px;
   font-family: 'Montserrat', sans-serif;
   font-size: 8px;
   letter-spacing: 0.5px;
   font-weight: lighter;
   color: #020504;
 }
-.connected:hover .backendHint{
-  visibility: visible;
-}
-.notConnected:hover .backendHint{
+.status:hover .backendHint{
   visibility: visible;
 }
 
