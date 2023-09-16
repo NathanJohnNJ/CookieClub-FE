@@ -90,6 +90,24 @@
   border-radius: 50%;
   background-color: rgb(212, 25, 25);
 }
+.backendHint{
+  visibility: hidden;
+  position: absolute;
+  right:0;
+  margin-right: 10px;
+  margin-top: 55px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 8px;
+  letter-spacing: 0.5px;
+  font-weight: lighter;
+  color: #020504;
+}
+.connected:hover .backendHint{
+  visibility: visible;
+}
+.notConnected:hover .backendHint{
+  visibility: visible;
+}
 
 /*******LOGIN/ REGISTER/ LOGOUT NAVBAR TEXT*********/
 

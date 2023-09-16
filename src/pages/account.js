@@ -40,7 +40,7 @@ const Account = (props) => {
                                         <UsernameModal newUser={props.newUser} setNewUser={props.setNewUser} token={props.token} />
                                         <EmailModal newUser={props.newUser} setNewUser={props.setNewUser} token={props.token} />
                                         <PasswordModal newUser={props.newUser} setNewUser={props.setNewUser} token={props.token} />
-                                        <DeleteModal token={props.token} setNewUser={props.setNewUser} />
+                                        <DeleteModal setNewUser={props.setNewUser} newUser={props.newUser} token={props.token} />
                                 </div>
 
                 </div>

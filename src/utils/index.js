@@ -83,7 +83,7 @@ export const handleEdit = async (updateKey, updateValue, setNewUser, token) => {
     }
 }
 
-export const handleDelete = async (userID, setNewUser) => {
+export const handleDelete = async (userID, token, setNewUser) => {
     try {
         const response = await fetch('http://nathanjohnthedom.com:5001/users/delete', {
             method: "DELETE",

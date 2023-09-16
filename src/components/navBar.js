@@ -36,9 +36,15 @@ const NavBar = (props) => {
             <div className="status">
                 {connected
                 ?
-                <div className="notConnected"></div>
+                <>
+                    <div className="notConnected"></div>
+                    <div className="backendHint"></div>
+                </>
                 :
-                <div className="connected"></div>
+                <>
+                    <div className="connected"></div>
+                    <div className="backendHint"></div>
+                </>
                 }
             </div>
             <div className="mainContent">
