@@ -11,7 +11,7 @@ const UsernameModal = (props) => {
 
     const usernameHandler = async () => {
         setUpdateKey("username")
-        await handleEdit(updateKey, updateValue, props.token)
+        await handleEdit(updateKey, updateValue, props.setNewUser, props.token)
         setModalIsOpen(false)
 }
 

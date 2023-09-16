@@ -2,7 +2,7 @@ import { writeCookie } from "../common";
 
 export const registerUser = async (firstName, lastName, username, email, password) => {
     try {
-        const response = await fetch('http://backend.njtd.xyz/users/register',
+        const response = await fetch('http://nathanjohnthedom.com:5001/users/register',
         {method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -26,10 +26,10 @@ export const registerUser = async (firstName, lastName, username, email, passwor
 
 export const loginUser = async (username, password, setNewUser, setLoginCookie, setToken) => {
     try {
-        const response = await fetch('http://backend.njtd.xyz/users/login', {
+        const response = await fetch('http://nathanjohnthedom.com:5001/users/login', {
             method: "POST",
             headers: {"Content-Type": "application/json",
-            "Access-Control-Allow-Origin": "http://backend.njtd.xyz"},
+            "Access-Control-Allow-Origin": "http://nathanjohnthedom.com:5001"},
             body: JSON.stringify({
                 "username": username,
                 "password": password
@@ -47,12 +47,29 @@ export const loginUser = async (username, password, setNewUser, setLoginCookie, 
     }
 }
 
-export const handleEdit = async (updateKey, updateValue, userID, setNewUser, token) => {
+export const findUser = async (token, setFoundUser) => {
+    const auth = `Bearer ${token}`;
     try {
-        const response = await fetch('http://backend.njtd.xyz/user/edit', {
+        const response = await fetch('http://nathanjohnthedom.com:5001/users/find', {
+            method: "GET",
+            headers: {"Content-Type": "application/json",
+            "Access-Control-Allow-Origin": "http://nathanjohnthedom.com:5001",
+            "Authorization": {auth}}
+        })
+        const data = await response.json()
+        console.log(data)
+        setFoundUser(data.user)
+    } catch (error) {
+        console.log(error)
+    }
+}
+
+export const handleEdit = async (updateKey, updateValue, setNewUser, token) => {
+    try {
+        const response = await fetch('http://nathanjohnthedom.com:5001/users/edit', {
             method: "PUT",
             headers: {"Content-Type": "application/json",
-            "Access-Control-Allow-Origin": "http://backend.njtd.xyz",
+            "Access-Control-Allow-Origin": "http://nathanjohnthedom.com:5001",
             "Authorization": "Bearer ", token},
             body: JSON.stringify({
                 updateKey : updateKey,
@@ -68,10 +85,10 @@ export const handleEdit = async (updateKey, updateValue, userID, setNewUser, tok
 
 export const handleDelete = async (userID, setNewUser) => {
     try {
-        const response = await fetch('http://backend.njtd.xyz/user/delete', {
+        const response = await fetch('http://nathanjohnthedom.com:5001/users/delete', {
             method: "DELETE",
             headers: {"Content-Type": "application/json",
-            "Access-Control-Allow-Origin": "http://backend.njtd.xyz"},
+            "Access-Control-Allow-Origin": "http://nathanjohnthedom.com:5001"},
             body: JSON.stringify({
                 id: userID
             })

@@ -11,7 +11,7 @@ const EmailModal = (props) => {
 
     const emailHandler = async () => {
         setUpdateKey("email")
-        await handleEdit(updateKey, updateValue, props.newUser.id, props.setNewUser, props.token)
+        await handleEdit(updateKey, updateValue, props.setNewUser, props.token)
         setModalIsOpen(false)
 }
 function openModal() {

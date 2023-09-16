@@ -21,7 +21,7 @@ const passwordHandler = async () => {
 
 async function submitPassword(){
     setUpdateKey("password")
-    await handleEdit(updateKey, updateValue, props.newUser.id, props.setNewUser, props.token)
+    await handleEdit(updateKey, updateValue, props.setNewUser, props.token)
     setModalIsOpen(false)
 }
 function noMatch(){
