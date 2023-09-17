@@ -42,6 +42,7 @@ export const loginUser = async (username, password, setNewUser, setLoginCookie, 
         const token = data.token
         setToken(token)
         setNewUser(data.user)
+        return("user =", data.user, "token =", token)
     } catch (error) {
         console.log(error)
     }

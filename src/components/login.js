@@ -35,11 +35,11 @@ const Login = (props) => {
             <form onSubmit={submitHandler}>
                 <div className="inputsleft">
                 <label className="loginLabel">USERNAME:
-                    <input className="loginInput" onChange= {(e) => setUsername(e.target.value)}></input>
+                    <input className="loginInput" type="username" autocomplete="username" onChange= {(e) => setUsername(e.target.value)}></input>
                 </label>
             <br></br>
                 <label className="loginLabel">PASSWORD:
-                    <input type="password" className="loginInput" onChange= {(e) => setPassword(e.target.value)}></input>
+                    <input type="password" className="loginInput" autocomplete="current-password"  onChange= {(e) => setPassword(e.target.value)}></input>
                 </label>
                 </div>
             <br></br>
