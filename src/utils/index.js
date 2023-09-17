@@ -46,13 +46,15 @@ export const loginUser = async (username, password, setNewUser, setLoginCookie, 
             }
         })
         const data = await response.json()
-        console.log(data)
+        console.log("data = ", data)
         const cookie = writeCookie("jwt_token", data.token, 7)
+        console.log("cookie =", cookie)
         setLoginCookie(cookie)
         const token = data.token
         setToken(token)
         setNewUser(data.user)
-        return("user =", data.user, "token =", token)
+        console.log("user =", data.user, "token =", token)
+        return(data)
     } catch (error) {
         console.log(error)
     }
