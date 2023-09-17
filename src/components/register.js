@@ -8,9 +8,9 @@ const Register = () => {
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
     const [username, setUsername] = useState();
-    const [email, setEmail] = useState();
-    const [password, setPassword] = useState();
-    const [passwordCheck, setPasswordCheck] = useState();
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [passwordCheck, setPasswordCheck] = useState('');
     const [modalIsOpen, setModalIsOpen] = useState(false);
     const [modal2IsOpen, setModal2IsOpen] = useState(false);
 

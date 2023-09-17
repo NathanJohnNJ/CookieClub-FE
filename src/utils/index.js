@@ -10,11 +10,12 @@ export const registerUser = async (firstName, lastName, username, email, passwor
         },
         mode: "cors",
         body: JSON.stringify({
-            "forename": firstName,
-            "surname": lastName,
+            "firstName": firstName,
+            "lastName": lastName,
             "username": username,
             "email": email,
-            "password": password
+            "password": password,
+            "agreedToTerms": "true"
             })
         })
     const data = await response.json()
