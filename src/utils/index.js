@@ -110,7 +110,8 @@ export const checkConnection = async () => {
             "mode": "no-cors"},
         })
         const data = await response.json()
-        console.log(data)
+        console.log("data = ", data)
+        console.log("response = ", response)
         return response;
     } catch (error) {
         console.error("error updating user", error);
