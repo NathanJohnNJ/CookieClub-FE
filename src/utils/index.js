@@ -26,14 +26,23 @@ export const registerUser = async (firstName, lastName, username, email, passwor
 
 export const loginUser = async (username, password, setNewUser, setLoginCookie, setToken) => {
     try {
+        // const response = await fetch('http://nathanjohnthedom.com:5001/users/login', {
+        //     method: "POST",
+        //     headers: {"Content-Type": "application/json",
+        //     "mode": "no-cors"},
+        //     body: JSON.stringify({
+        //         "username": username,
+        //         "password": password
+        //     })
+        // })
         const response = await fetch('http://nathanjohnthedom.com:5001/users/login', {
-            method: "POST",
+            method: "GET",
             headers: {"Content-Type": "application/json",
-            "Access-Control-Allow-Origin": "https://cookiefront.njtd.xyz"},
-            body: JSON.stringify({
+            "mode": "no-cors"},
+            headers: {
                 "username": username,
                 "password": password
-            })
+            }
         })
         const data = await response.json()
         console.log(data)
@@ -54,7 +63,7 @@ export const findUser = async (token, setFoundUser) => {
         const response = await fetch('http://nathanjohnthedom.com:5001/users/find', {
             method: "GET",
             headers: {"Content-Type": "application/json",
-            "Access-Control-Allow-Origin": "https://cookiefront.njtd.xyz",
+            "mode": "no-cors",
             "Authorization": {auth}}
         })
         const data = await response.json()
@@ -70,7 +79,7 @@ export const handleEdit = async (updateKey, updateValue, setNewUser, token) => {
         const response = await fetch('http://nathanjohnthedom.com:5001/users/edit', {
             method: "PUT",
             headers: {"Content-Type": "application/json",
-            "Access-Control-Allow-Origin": "https://cookiefront.njtd.xyz",
+            "mode": "no-cors",
             "Authorization": "Bearer ", token},
             body: JSON.stringify({
                 updateKey : updateKey,
@@ -89,7 +98,7 @@ export const handleDelete = async (userID, token, setNewUser) => {
         const response = await fetch('http://nathanjohnthedom.com:5001/users/delete', {
             method: "DELETE",
             headers: {"Content-Type": "application/json",
-            "Access-Control-Allow-Origin": "https://cookiefront.njtd.xyz",
+            "mode": "no-cors",
             "Authorization": "Bearer ", token},
             body: JSON.stringify({
                 id: userID
