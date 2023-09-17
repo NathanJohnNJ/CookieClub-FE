@@ -11,7 +11,7 @@ const NavBar = (props) => {
     const isConnected = checkConnection();
 
     useEffect(() => {
-        if(isConnected){
+        if(isConnected==="API is working"){
             setConnected(true);
         } else{
             setConnected(false);
