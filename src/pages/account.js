@@ -13,12 +13,12 @@ const Account = (props) => {
                                         <div className="firstnamebox">
                                                 <label className="fnLabel" htmlFor="firstName">FIRST NAME:</label>
                                                 <br></br>
-                                                <p id="firstName" className="fnLabelTxt">{props.newUser.forename}</p>
+                                                <p id="firstName" className="fnLabelTxt">{props.newUser.firstName}</p>
                                         </div>
                                         <div className='surnamebox'>
                                                 <label className="surlabel" htmlFor="lastName">SURNAME:</label>
                                                 <br></br>
-                                                <p id="lastName" className="surLabelTxt">{props.newUser.surname}</p>
+                                                <p id="lastName" className="surLabelTxt">{props.newUser.lastName}</p>
                                         </div>
                                 </div>
 
