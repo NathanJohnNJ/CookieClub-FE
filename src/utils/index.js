@@ -107,7 +107,7 @@ export const checkConnection = async () => {
         const response = await fetch('http://nathanjohnthedom.com:5001/health', {
             method: "GET",
             headers: {"Content-Type": "application/json",
-            "Access-Control-Allow-Origin": "*"},
+            "mode": "no-cors"},
         })
         const data = await response.json()
         console.log(data)
