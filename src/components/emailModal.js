@@ -38,7 +38,7 @@ function closeModal() {
                     <form onSubmit = {() => emailHandler()}>
                         <div className="inputs">
                             <label className="label" htmlFor="newEmail">NEW EMAIL:</label>
-                                <input className="newEmail" id="newEmail" type="email" autocomplete="off"  onChange= {(e) => setUpdateValue(e.target.value)} required></input>
+                                <input className="newEmail" id="newEmail" type="email" autoComplete="off"  onChange= {(e) => setUpdateValue(e.target.value)} required></input>
                         </div>
                         <button type="submit" className="submitBtn">Submit</button>
                     </form>

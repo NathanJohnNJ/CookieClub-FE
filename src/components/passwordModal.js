@@ -43,9 +43,9 @@ function noMatch(){
                     <form onSubmit = {() => passwordHandler()}>
                         <div className="inputs">
                             <label className="label" htmlFor="newPassword">NEW PASSWORD:</label>
-                                <input type="password" autocomplete="new-password"  className="newPassword" id="newPassword" onChange= {(e) => setUpdateValue(e.target.value)} required></input>
+                                <input type="password" autoComplete="new-password"  className="newPassword" id="newPassword" onChange= {(e) => setUpdateValue(e.target.value)} required></input>
                             <label className="label" htmlFor="repeatPassword">TYPE PASSWORD AGAIN:</label>
-                                <input type="password" autocomplete="new-password"  className="newPassword" id="repeatPassword" onChange= {(e) => setCheckValue(e.target.value)} required></input>
+                                <input type="password" autoComplete="new-password"  className="newPassword" id="repeatPassword" onChange= {(e) => setCheckValue(e.target.value)} required></input>
                         </div>
                         <button type="submit" className="submitBtn">Submit</button>
                     </form>

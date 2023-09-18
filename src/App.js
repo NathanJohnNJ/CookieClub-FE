@@ -1,6 +1,5 @@
 import './App.css';
 import './components/style.css';
-import { inject } from '@vercel/analytics';
 import { useState, useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
 
@@ -16,7 +15,6 @@ function App() {
   const [newUser, setNewUser] = useState({});
   const [loginCookie, setLoginCookie] = useState(false);
   const [token, setToken] = useState('');
-  inject();
 
   useEffect(() => {
     const fetchData = async () => {

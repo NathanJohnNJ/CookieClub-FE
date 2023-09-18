@@ -2,7 +2,7 @@ import { writeCookie } from "../common";
 
 export const registerUser = async (firstName, lastName, username, email, password) => {
     try {
-        const response = await fetch('http://nathanjohnthedom.com:5001/users/register',
+        const response = await fetch('http://localhost:5001/users/register',
         {method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -27,24 +27,22 @@ export const registerUser = async (firstName, lastName, username, email, passwor
 
 export const loginUser = async (username, password, setNewUser, setLoginCookie, setToken) => {
     try {
-        // const response = await fetch('http://nathanjohnthedom.com:5001/users/login', {
-        //     method: "POST",
-        //     headers: {"Content-Type": "application/json",
-        //     "mode": "no-cors"},
-        //     body: JSON.stringify({
-        //         "username": username,
-        //         "password": password
-        //     })
-        // })
-        const response = await fetch('http://nathanjohnthedom.com:5001/users/login', {
-            method: "GET",
+        const response = await fetch('http://localhost:5001/users/login', {
+            method: "POST",
             headers: {"Content-Type": "application/json",
             "mode": "no-cors"},
-            headers: {
+            body: JSON.stringify({
                 "username": username,
                 "password": password
-            }
+            })
         })
+        // const response = await fetch('http://localhost:5001/users/login', {
+        //     method: "GET",
+        //     headers: {"Content-Type": "application/json",
+        //     "mode": "no-cors"},
+        //     "username": username,
+        //     "password": password
+        // })
         const data = await response.json()
         console.log("data = ", data)
         const cookie = writeCookie("jwt_token", data.token, 7)
@@ -54,7 +52,6 @@ export const loginUser = async (username, password, setNewUser, setLoginCookie, 
         setToken(token)
         setNewUser(data.user)
         console.log("user =", data.user, "token =", token)
-        return(data)
     } catch (error) {
         console.log(error)
     }
@@ -63,7 +60,7 @@ export const loginUser = async (username, password, setNewUser, setLoginCookie, 
 export const findUser = async (token, setFoundUser) => {
     const auth = `Bearer ${token}`;
     try {
-        const response = await fetch('http://nathanjohnthedom.com:5001/users/find', {
+        const response = await fetch('http://localhost:5001/users/find', {
             method: "GET",
             headers: {"Content-Type": "application/json",
             "mode": "no-cors",
@@ -79,7 +76,8 @@ export const findUser = async (token, setFoundUser) => {
 
 export const handleEdit = async (updateKey, updateValue, setNewUser, token) => {
     try {
-        const response = await fetch('http://nathanjohnthedom.com:5001/users/edit', {
+        console.log(token)
+        const response = await fetch('http://localhost:5001/users/edit', {
             method: "PUT",
             headers: {"Content-Type": "application/json",
             "mode": "no-cors",
@@ -98,7 +96,7 @@ export const handleEdit = async (updateKey, updateValue, setNewUser, token) => {
 
 export const handleDelete = async (userID, token, setNewUser) => {
     try {
-        const response = await fetch('http://nathanjohnthedom.com:5001/users/delete', {
+        const response = await fetch('http://localhost:5001/users/delete', {
             method: "DELETE",
             headers: {"Content-Type": "application/json",
             "mode": "no-cors",
@@ -117,7 +115,7 @@ export const handleDelete = async (userID, token, setNewUser) => {
 
 export const checkConnection = async () => {
     try {
-        const response = await fetch('http://nathanjohnthedom.com:5001/health', {
+        const response = await fetch('http://localhost:5001/health', {
             method: "GET",
             headers: {"Content-Type": "application/json",
             "mode": "no-cors"},

@@ -60,7 +60,7 @@
     font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
     font-weight: bolder;
-    font-size: 37px;
+    font-size: 30px;
     letter-spacing: 0.5px;
     padding-right: 20vh;
     padding-top: -10px;
@@ -74,14 +74,18 @@
     font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
     font-weight: bolder;
-    font-size: 15px;
+    font-size: 12px;
     letter-spacing: 0.5px;
     padding-right: 20vh;
     color: #FF66C4;
 }
 .btnHeader {
+    display:flex;   
+    align-items: center;
     justify-content: center;
-    align-content: center;
+    text-justify: center;
+    text-align: center;
+    text-decoration: none;
     background-color: #5CB8B2;
     color: white;
     font-size: 16px;
@@ -102,5 +106,25 @@
     .ourFavSlice{
         flex-direction: column;
         align-items: center;
+    }
+    .textHeader{
+        padding-left: 55%
+    }
+    .textHeader1{
+        font-size:15px;
+    }
+    .textHeader2{
+        font-size: 6px;
+    }
+}
+@media screen and (max-width:1000px){
+    .textHeader{
+        padding-left: 60%
+    }
+    .textHeader1{
+        font-size:20px;
+    }
+    .textHeader2{
+        font-size: 10px;
     }
 }

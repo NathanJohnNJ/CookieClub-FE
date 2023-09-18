@@ -32,13 +32,13 @@ const UsernameModal = (props) => {
                     <form onSubmit = {() => usernameHandler()}>
                         <div className="inputs">
                             <label className="label" htmlFor="newUsername">NEW USERNAME:</label>
-                                <input className="newUsername" type="username" autocomplete="off" id="newUsername" onChange= {(e) => setUpdateValue(e.target.value)} required></input>
+                                <input className="newUsername" type="username" autoComplete="off" id="newUsername" onChange= {(e) => setUpdateValue(e.target.value)} required></input>
                         </div>
                         <button type="submit" className="submitBtn">Submit</button>
                     </form>
                 </div>
             </Modal>
-            </div>
+        </div>
     )
 }
 

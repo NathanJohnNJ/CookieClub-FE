@@ -11,26 +11,22 @@ const Account = (props) => {
 
                                 <div className='name'>
                                         <div className="firstnamebox">
-                                                <label className="fnLabel" htmlFor="firstName">FIRST NAME:</label>
-                                                <br></br>
+                                                <p className="fnLabel">FIRST NAME:</p>
                                                 <p id="firstName" className="fnLabelTxt">{props.newUser.firstName}</p>
                                         </div>
                                         <div className='surnamebox'>
-                                                <label className="surlabel" htmlFor="lastName">SURNAME:</label>
-                                                <br></br>
+                                                <p className="surlabel">SURNAME:</p>
                                                 <p id="lastName" className="surLabelTxt">{props.newUser.lastName}</p>
                                         </div>
                                 </div>
 
                                 <div className="usernameEmail">
                                         <div className='userbox'>
-                                                <label className="userLabel" htmlFor="username">USERNAME:</label>
-                                                <br></br>
+                                                <p className="userLabel">USERNAME:</p>
                                                 <p id="username" className="usernameLabelTxt" >{props.newUser.username}</p>
                                         </div>
                                         <div className='emailbox'>
-                                                <label className="emailLabel" htmlFor="email">EMAIL:</label>
-                                                <br></br>
+                                                <p className="emailLabel">EMAIL:</p>
                                                 <p id="email" className="emailLabelTxt" >{props.newUser.email}</p>
                                         </div>
                                 </div>

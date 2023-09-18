@@ -53,28 +53,28 @@ const Register = () => {
             <div className="inputs">
             <div className="left">
                 <label className="label">FIRST NAME:
-                    <input className="input" type="name" autocomplete="given-name"  onChange= {(e) => setFirstName(e.target.value)} required></input>
+                    <input className="input" type="name" autoComplete="given-name"  onChange= {(e) => setFirstName(e.target.value)} required></input>
                 </label>
             <br></br>
                 <label className="label">USERNAME:
-                    <input className="input" type="username" autocomplete="username" onChange= {(e) => setUsername(e.target.value)} required></input>
+                    <input className="input" type="username" autoComplete="username" onChange= {(e) => setUsername(e.target.value)} required></input>
                 </label>
             <br></br>
                 <label className="label">PASSWORD:
-                    <input className="input" type="password" autocomplete="new-password" onChange= {(e) => setPassword(e.target.value)} required></input>
+                    <input className="input" type="password" autoComplete="new-password" onChange= {(e) => setPassword(e.target.value)} required></input>
                 </label>
             </div>
             <div className="right">
                 <label className="label">LAST NAME:
-                    <input className="input" type="name" autocomplete="family-name" onChange= {(e) => setLastName(e.target.value)} required></input>
+                    <input className="input" type="name" autoComplete="family-name" onChange= {(e) => setLastName(e.target.value)} required></input>
                 </label>
             <br></br>
                 <label className="label">EMAIL:
-                    <input className="input" type="email" autocomplete="email"  onChange={(e) => setEmail(e.target.value)} required></input>
+                    <input className="input" type="email" autoComplete="email"  onChange={(e) => setEmail(e.target.value)} required></input>
                 </label>
             <br></br>
                 <label className="label">TYPE PASSWORD AGAIN:
-                    <input className="input" type="password" autocomplete="new-password" onChange= {(e) => setPasswordCheck(e.target.value)} required></input>
+                    <input className="input" type="password" autoComplete="new-password" onChange= {(e) => setPasswordCheck(e.target.value)} required></input>
                 </label>
             </div>
             </div>

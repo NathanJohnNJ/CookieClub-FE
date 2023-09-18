@@ -2,6 +2,7 @@ import './home.css';
 import HOCModal from '../components/HOCModal';
 import Slider from '../components/slider/slider';
 import approved from "../components/images/approved.png"
+import { NavLink } from 'react-router-dom';
 
 
 const Home = (props) => {
@@ -17,9 +18,7 @@ const Home = (props) => {
                     <p className='textHeader1'> The Best Cookie Recipes To Bake Year-Round!</p>
                     <br /><br />
                     <p className='textHeader2'> There's a cookie here for everyone.</p>
-                    <a href=".recipes">
-                        <button className='btnHeader' onClick={"/recipes"}>Recipes</button>
-                    </a>
+                        <NavLink className='btnHeader'  to="/recipes">RECIPES</NavLink>
                 </div>
             </div>
 
