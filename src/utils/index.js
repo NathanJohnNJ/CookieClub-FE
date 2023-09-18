@@ -74,17 +74,54 @@ export const findUser = async (token, setFoundUser) => {
     }
 }
 
-export const handleEdit = async (updateKey, updateValue, setNewUser, token) => {
+export const handleUpdateUsername = async (updateValue, setNewUser, token) => {
     try {
         console.log(token)
-        const response = await fetch('http://localhost:5001/users/edit', {
+        const response = await fetch('http://localhost:5001/users/updateUsername', {
             method: "PUT",
             headers: {"Content-Type": "application/json",
             "mode": "no-cors",
             "Authorization": "Bearer ", token},
             body: JSON.stringify({
-                updateKey : updateKey,
-                updateValue: updateValue,
+                updateValue: updateValue
+            })
+        })
+        const data = await response.json()
+        setNewUser(data.user);
+    } catch (error) {
+        console.error("error updating user", error);
+    }
+}
+
+export const handleUpdateEmail = async (updateValue, setNewUser, token) => {
+    try {
+        console.log(token)
+        const response = await fetch('http://localhost:5001/users/updateEmail', {
+            method: "PUT",
+            headers: {"Content-Type": "application/json",
+            "mode": "no-cors",
+            "Authorization": "Bearer ", token},
+            body: JSON.stringify({
+                updateValue: updateValue
+            })
+        })
+        const data = await response.json()
+        setNewUser(data.user);
+    } catch (error) {
+        console.error("error updating user", error);
+    }
+}
+
+export const handleUpdatePassword = async (updateValue, setNewUser, token) => {
+    try {
+        console.log(token)
+        const response = await fetch('http://localhost:5001/users/updatePassword', {
+            method: "PUT",
+            headers: {"Content-Type": "application/json",
+            "mode": "no-cors",
+            "Authorization": "Bearer ", token},
+            body: JSON.stringify({
+                updateValue: updateValue
             })
         })
         const data = await response.json()

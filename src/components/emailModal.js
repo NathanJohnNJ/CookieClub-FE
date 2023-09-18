@@ -1,17 +1,15 @@
 import Modal from 'react-modal';
-import { handleEdit } from '../utils';
+import { handleUpdateEmail } from '../utils';
 import { useState } from 'react';
 import '../pages/account.css';
 
 const EmailModal = (props) => {
-
-    const [updateKey, setUpdateKey] = useState('');
     const [updateValue, setUpdateValue] = useState('');
     const [modalIsOpen, setModalIsOpen] = useState(false);
 
     const emailHandler = async () => {
         setUpdateKey("email")
-        await handleEdit(updateKey, updateValue, props.setNewUser, props.token)
+        await handleUpdateEmail(updateKey, updateValue, props.setNewUser, props.token)
         setModalIsOpen(false)
 }
 function openModal() {

@@ -1,17 +1,14 @@
 import Modal from 'react-modal';
-import { handleEdit } from '../utils';
+import { handleUpdateUsername } from '../utils';
 import { useState } from 'react';
 import '../pages/account.css';
 
 const UsernameModal = (props) => {
-
-    const [updateKey, setUpdateKey] = useState('');
     const [updateValue, setUpdateValue] = useState('');
     const [modalIsOpen, setModalIsOpen] = useState(false);
 
     const usernameHandler = async () => {
-        setUpdateKey("username")
-        await handleEdit(updateKey, updateValue, props.setNewUser, props.token)
+        await handleUpdateUsername(updateValue, props.setNewUser, props.token)
         setModalIsOpen(false)
 }
 

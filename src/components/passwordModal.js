@@ -1,11 +1,9 @@
 import Modal from 'react-modal';
-import { handleEdit } from '../utils';
+import { handleUpdatePassword } from '../utils';
 import { useState } from 'react';
 import '../pages/account.css';
 
 const PasswordModal = (props) => {
-
-    const [updateKey, setUpdateKey] = useState('');
     const [updateValue, setUpdateValue] = useState('');
     const [checkValue, setCheckValue] = useState('');
     const [modalIsOpen, setModalIsOpen] = useState(false);
@@ -21,7 +19,7 @@ const passwordHandler = async () => {
 
 async function submitPassword(){
     setUpdateKey("password")
-    await handleEdit(updateKey, updateValue, props.setNewUser, props.token)
+    await handleUpdatePassword(updateValue, props.setNewUser, props.token)
     setModalIsOpen(false)
 }
 function noMatch(){
