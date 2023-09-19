@@ -8,4 +8,4 @@ export const sliderData = [
     {
       image: "https://i.ibb.co/180Hj6V/slideshow-3.png",
     },
-  ];
+  ]; 

@@ -1,8 +1,7 @@
 import './home.css';
 import HOCModal from '../components/HOCModal';
 import Slider from '../components/slider/slider';
-import approved from "../components/images/approved.png"
-import { NavLink } from 'react-router-dom';
+
 
 
 const Home = (props) => {
@@ -13,13 +12,7 @@ const Home = (props) => {
                 <div className='sliderHeader'>
                     <Slider />
                 </div>
-                <div className='textHeader'>
-                    <img className='approvedLogo' src={approved} alt=""></img>
-                    <p className='textHeader1'> The Best Cookie Recipes To Bake Year-Round!</p>
-                    <br /><br />
-                    <p className='textHeader2'> There's a cookie here for everyone.</p>
-                        <NavLink className='btnHeader'  to="/recipes">RECIPES</NavLink>
-                </div>
+                
             </div>
 
             <div className='ourFavourites'>

@@ -17,10 +17,6 @@ const NavBar = (props) => {
             setConnected(false);
         }
     })
-    
-    
-
-
     return(
         <>
         <div className="navbarMain">

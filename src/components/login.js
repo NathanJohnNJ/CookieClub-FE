@@ -12,7 +12,7 @@ const Login = (props) => {
         e.preventDefault()
         console.log("username = ", username)
         console.log("password = ", password)
-        const data = await loginUser(username, password, props.setNewUser, props.setLoginCookie, props.setToken)
+        await loginUser(username, password, props.setNewUser, props.setLoginCookie, props.setToken)
         setTimeout(() => closeModal(), 4000)
     }
     function openModal() {
