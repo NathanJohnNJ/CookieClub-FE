@@ -18,7 +18,6 @@ const passwordHandler = async () => {
 }
 
 async function submitPassword(){
-    setUpdateKey("password")
     await handleUpdatePassword(updateValue, props.setNewUser, props.token)
     setModalIsOpen(false)
 }
