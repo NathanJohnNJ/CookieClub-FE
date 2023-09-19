@@ -8,15 +8,17 @@ import { checkConnection } from '../utils';
 
 const NavBar = (props) => {
     const [connected, setConnected] = useState(false);
-    const isConnected = checkConnection();
-
-    useEffect(() => {
-        if(isConnected==="API is working"){
+    const isConnected = async () => {
+        const connectionCheck = await checkConnection();
+        if(connectionCheck==="API is working"){
             setConnected(true);
         } else{
             setConnected(false);
         }
-    })
+    }
+    useEffect(() => {
+        isConnected();
+    }, [])
     return(
         <>
         <div className="navbarMain">
@@ -33,7 +35,7 @@ const NavBar = (props) => {
                  <LoginOrAcc loginCookie={props.loginCookie} setLoginCookie={props.setLoginCookie} newUser={props.newUser} setNewUser={props.setNewUser} token={props.token} setToken={props.setToken}/> 
                 }
             <div className="status">
-                {connected
+                {(connected===false)
                 ?
                 <>
                     <div className="notConnected"></div>
