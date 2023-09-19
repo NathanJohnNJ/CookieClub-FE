@@ -8,7 +8,6 @@ const EmailModal = (props) => {
     const [modalIsOpen, setModalIsOpen] = useState(false);
 
     const emailHandler = async () => {
-        setUpdateKey("email")
         await handleUpdateEmail(updateKey, updateValue, props.setNewUser, props.token)
         setModalIsOpen(false)
 }
