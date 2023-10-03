@@ -1,9 +1,8 @@
 import { useState, useEffect } from "react";
-import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
 import approved from "../../components/images/approved.png"
 import { NavLink } from 'react-router-dom';
 import { sliderData } from "../slider/sliderdata";
-import "./slider.scss";
+import "./slider.css";
 
 const Slider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -14,10 +13,6 @@ const Slider = () => {
 
   const nextSlide = () => {
     setCurrentSlide(currentSlide === slideLength - 1 ? 0 : currentSlide + 1);
-  };
-
-  const prevSlide = () => {
-    setCurrentSlide(currentSlide === 0 ? slideLength - 1 : currentSlide - 1);
   };
 
   function auto() {
@@ -36,7 +31,6 @@ const Slider = () => {
   return (
     <div className="slider">
       <div className="sliderLeft">
-        <AiOutlineArrowLeft className="arrow prev" onClick={prevSlide} />
         {sliderData.map((slide, index) => {
           return (
             <div className={index === currentSlide ? "slide current" : "slide"} key={index}>
@@ -48,7 +42,6 @@ const Slider = () => {
             </div>
           );
         })}
-        <AiOutlineArrowRight className="arrow next" onClick={nextSlide} />
       </div>
       <div className="sliderRight">
         <div className='textHeader'>
