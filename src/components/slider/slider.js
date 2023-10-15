@@ -26,6 +26,7 @@ const Slider = () => {
   useEffect(() => {
       auto();
     return () => clearInterval(slideInterval);
+    // eslint-disable-next-line 
   }, [currentSlide]);
 
   return (
@@ -36,7 +37,7 @@ const Slider = () => {
             <div className={index === currentSlide ? "slide current" : "slide"} key={index}>
               {index === currentSlide && (
                 <div>
-                  <img src={slide.image} alt="Slideshow image" className="image" />
+                  <img src={slide.image} alt="Slideshow" className="image" />
                 </div>
               )}
             </div>
@@ -45,7 +46,7 @@ const Slider = () => {
       </div>
       <div className="sliderRight">
         <div className='textHeader'>
-          <img className='approvedLogo' src={approved} alt=""></img>
+          <img className='approvedLogo' src={approved} alt="Approved"></img>
           <p className='textHeader1'> The Best Cookie Recipes To Bake Year-Round!</p>
           <br /><br />
           <p className='textHeader2'> There's a cookie here for everyone.</p>

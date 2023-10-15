@@ -166,6 +166,13 @@
 .logout:hover {
   color: #a91871;
 }
+.search{
+  width: 25px;
+  height: 25px;
+  display: flex;
+  position: absolute;
+  right:-3%;
+}
 
 /*******SIGN UP / LOG IN MODAL*********/
 

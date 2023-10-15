@@ -3,6 +3,7 @@ import LoginOrAcc from './loginOrAcc';
 import Logout from './logout';
 import { Outlet, NavLink } from 'react-router-dom';
 import logo from "./images/cookie-logo.png";
+import search from "./images/search.png";
 import Status from "./connection";
 
 const NavBar = (props) => {
@@ -22,6 +23,7 @@ const NavBar = (props) => {
                  :
                  <LoginOrAcc loginCookie={props.loginCookie} setLoginCookie={props.setLoginCookie} newUser={props.newUser} setNewUser={props.setNewUser} token={props.token} setToken={props.setToken}/> 
                 }
+                <img src={search} className="search" alt="search"></img>
                 <Status />
             <div className="mainContent">
                 <Outlet />

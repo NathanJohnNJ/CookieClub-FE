@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;1,400;1,600&display=swap');
+
 /*******RECIPE PAGE*********/
 
 .labelDiv {
@@ -27,7 +29,7 @@
     font-size: 12px;
 }
 .modalBtn {
-    margin-top: 16px;
+    margin-top: 18px;
     background-color: #5CB8B2;
     color: white;
     width: 40px;
@@ -38,6 +40,13 @@
     cursor: pointer;
     justify-content: center;
 
+}
+.arrow{
+    height: 28px;
+    width: 33px;
+    margin-left: -3px;
+    margin-top: -3px;
+    rotate: -7.5deg
 }
 .modalBtn:hover {
     background-color: #418681;

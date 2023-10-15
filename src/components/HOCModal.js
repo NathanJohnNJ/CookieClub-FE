@@ -1,5 +1,6 @@
 import Modal from 'react-modal';
 import { useState } from "react"
+import Arrow from './images/arrow.png'
 import './HOCModal.css';
 
 const HOCModal = (props) => {
@@ -54,7 +55,7 @@ const HOCModal = (props) => {
             </Modal>
             <div className='labelDiv'>
                 <p className='recipeTxt'>{props.data.recipe.label}</p>
-                <button className='modalBtn' onClick={openModal}>🡲</button>
+                <button className='modalBtn' onClick={openModal}><img src={Arrow} alt="arrow" className="arrow"></img></button>
             </div>
         </div>
     )
