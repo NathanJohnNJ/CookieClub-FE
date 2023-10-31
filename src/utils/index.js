@@ -2,34 +2,33 @@ import { writeCookie } from "../common";
 
 export const registerUser = async (firstName, lastName, username, email, password) => {
     try {
-        const response = await fetch('http://192.168.0.80:5001/users/register',
-        {method: "POST",
-        headers: {
-            "Content-Type": "application/json",
-            "Accept": "application/json"
-        },
-        mode: "cors",
-        body: JSON.stringify({
-            "firstName": firstName,
-            "lastName": lastName,
-            "username": username,
-            "email": email,
-            "password": password,
-            "agreedToTerms": "true"
-            })
-        })
-    const data = await response.json()
-        console.log(data)
-    } catch (error) {
-       console.log(error)
-    }
+        const response = await fetch('http://nathanjohnthedom.com:5001/users/register', {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            // mode: "cors",
+            body: JSON.stringify({
+                "firstName": firstName,
+                "lastName": lastName,
+                "username": username,
+                "email": email,
+                "password": password,
+                "agreedToTerms": "true"
+                })
+            });
+        const data = await response.json()
+            console.log(data)
+        } catch (error) {
+        console.log(error)
+        }
 }
 
 export const loginUser = async (username, password, setNewUser, setLoginCookie, setToken) => {
     try {
-        const response = await fetch('http://192.168.0.80:5001/users/login', {
+        const response = await fetch('http://nathanjohnthedom.com:5001/users/login', {
             method: "POST",
-            mode: "cors",
+            // mode: "cors",
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify({
                 "username": username,
@@ -53,9 +52,9 @@ export const loginUser = async (username, password, setNewUser, setLoginCookie, 
 export const findUser = async (token, setFoundUser) => {
     const auth = `Bearer ${token}`;
     try {
-        const response = await fetch('http://192.168.0.80:5001/users/find', {
+        const response = await fetch('http://nathanjohnthedom.com:5001/users/find', {
             method: "GET",
-            mode: "cors",
+            // mode: "cors",
             headers: {"Content-Type": "application/json",
             "credentials": "include",
             "Authorization": {auth}}
@@ -71,14 +70,14 @@ export const findUser = async (token, setFoundUser) => {
 export const handleUpdateUsername = async (updateValue, setNewUser, token) => {
     try {
         console.log(token)
-        const response = await fetch('http://192.168.0.80:5001/users/updateUsername', {
+        const response = await fetch('http://nathanjohnthedom.com:5001/users/updateUsername', {
             method: "PUT",
-            mode: "cors",
+            // mode: "cors",
             headers: {"Content-Type": "application/json",
             "credentials": "include",
             "Authorization": "Bearer ", token},
             body: JSON.stringify({
-                updateValue: updateValue
+                username: updateValue
             })
         })
         const data = await response.json()
@@ -91,14 +90,14 @@ export const handleUpdateUsername = async (updateValue, setNewUser, token) => {
 export const handleUpdateEmail = async (updateValue, setNewUser, token) => {
     try {
         console.log(token)
-        const response = await fetch('http://192.168.0.80:5001/users/updateEmail', {
+        const response = await fetch('http://nathanjohnthedom.com:5001/users/updateEmail', {
             method: "PUT",
-            mode: "cors",
+            // mode: "cors",
             headers: {"Content-Type": "application/json",
             "credentials": "include",
             "Authorization": "Bearer ", token},
             body: JSON.stringify({
-                updateValue: updateValue
+                email: updateValue
             })
         })
         const data = await response.json()
@@ -111,14 +110,14 @@ export const handleUpdateEmail = async (updateValue, setNewUser, token) => {
 export const handleUpdatePassword = async (updateValue, setNewUser, token) => {
     try {
         console.log(token)
-        const response = await fetch('http://192.168.0.80:5001/users/updatePassword', {
+        const response = await fetch('http://nathanjohnthedom.com:5001/users/updatePassword', {
             method: "PUT",
-            mode: "cors",
+            // mode: "cors",
             headers: {"Content-Type": "application/json",
             "credentials": "include",
             "Authorization": "Bearer ", token},
             body: JSON.stringify({
-                updateValue: updateValue
+                password: updateValue
             })
         })
         const data = await response.json()
@@ -130,9 +129,9 @@ export const handleUpdatePassword = async (updateValue, setNewUser, token) => {
 
 export const handleDelete = async (userID, token, setNewUser) => {
     try {
-        const response = await fetch('http://192.168.0.80:5001/users/delete', {
+        const response = await fetch('http://nathanjohnthedom.com:5001/users/delete', {
             method: "DELETE",
-            mode: "cors",
+            // mode: "cors",
             headers: {"Content-Type": "application/json",
             "credentials": "include",
             "Authorization": "Bearer ", token},

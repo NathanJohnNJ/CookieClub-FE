@@ -30,6 +30,10 @@ const Register = () => {
     const submitHandler = async (e) => {
         e.preventDefault()
         if(passwordCheck === password){
+            console.log("firstName = ", firstName)
+            console.log("lastName = ", lastName)
+            console.log("username = ", username)
+            console.log("password = ", password)
             await registerUser(firstName, lastName, username, email, password)
         setTimeout(() => closeModal(), 4000)
         } else{
